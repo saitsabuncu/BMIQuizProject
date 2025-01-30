@@ -1,89 +1,68 @@
-# BMI Hesaplama Uygulaması
+# BMIQuizProject
 
-**Bu uygulama, kullanıcıların Boy-Kilo Endeksi'ni (BMI - Body Mass Index) kolayca hesaplamalarını sağlayan bir Python/Tkinter uygulamasıdır.** Kullanıcılar, boylarını ve kilolarını girerek BMI değerlerini öğrenebilir ve bu değerin hangi kategoriye girdiğini görebilir (ör. "Zayıf", "Normal", "Kilolu", "Obez").
+**BMIQuizProject**, kullanıcının Vücut Kitle İndeksi'ni (BMI) hesaplayan ve ardından BMI sonuçlarına göre bir dizi soruyla kullanıcıyı yönlendiren bir uygulamadır. Bu proje, sağlıklı yaşam farkındalığını artırmayı ve kullanıcıların kendi sağlık durumları hakkında bilgi sahibi olmalarını sağlamayı amaçlamaktadır.
 
----
+## Özellikler
 
-## 🚀 Özellikler
+- **BMI Hesaplama:** Kullanıcının boy ve kilo bilgilerini alarak BMI değerini hesaplar.
+- **Kişiselleştirilmiş Sorular:** Hesaplanan BMI değerine göre kullanıcılara özel sorular sunar.
+- **Sonuç Analizi:** Kullanıcının verdiği cevaplara göre genel bir sağlık değerlendirmesi sağlar.
 
-- **Boy ve Kilo Girişi**: Kullanıcıdan boy (cm) ve kilo (kg) bilgilerini alır.
-- **BMI Hesaplama**: Girilen değerlere göre BMI şu formülle hesaplanır:
-  \[
-  BMI = \frac{\text{Kilo (kg)}}{\text{Boy (m)}^2}
-  \]
-- **BMI Kategorileri**:
-  - Zayıf: BMI < 18.5
-  - Normal: 18.5 ≤ BMI < 24.9
-  - Kilolu: 25 ≤ BMI < 29.9
-  - Obez: BMI ≥ 30
-- **Hata Yönetimi**: Geçersiz veya boş girişlerde kullanıcı dostu hata mesajları gösterilir.
+## Kurulum
 
----
+1. **Depoyu Klonlayın:**
 
-## 📋 Gereksinimler
-
-- Python 3.x
-- Tkinter (standart olarak Python ile gelir, ek yükleme gerekmez)
-
----
-
-## 🔧 Kurulum
-
-1. **Projeyi klonlayın veya indirin**:
    ```bash
-   git clone https://github.com/kullanici/bmi_calculator.git
-   cd bmi_calculator
+   git clone https://github.com/saitsabuncu/BMIQuizProject.git
+   cd BMIQuizProject
    ```
 
-2. **Uygulamayı çalıştırın**:
+2. **Sanal Ortam Oluşturun:**
+
    ```bash
-   python bmi_calculator.py
+   python -m venv venv
+   source venv/bin/activate  # macOS/Linux
+   venv\Scripts\activate     # Windows
    ```
 
----
+3. **Gerekli Bağımlılıkları Yükleyin:**
 
-## 📖 Kullanım
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-1. **Boyunuzu (cm) girin**.
-2. **Kilonuzu (kg) girin**.
-3. **Hesapla** butonuna tıklayın.
-4. **Sonuç**: BMI değeri ve kategori ("Zayıf", "Normal", "Kilolu", "Obez") ekranda görüntülenir.
+   *Not:* Eğer `requirements.txt` dosyası mevcut değilse, projenin kullandığı kütüphaneleri manuel olarak yüklemeniz gerekebilir.
 
----
+## Kullanım
 
-## 📝 Örnek Çalışma
+1. **Uygulamayı Başlatın:**
 
-- **Giriş**:
-  - Boy: `175 cm`
-  - Kilo: `70 kg`
-- **Çıktı**:
-  ```
-  BMI: 22.86 - Normal
-  ```
+   ```bash
+   python main.py
+   ```
 
----
+2. **Kullanıcı Arayüzü:**
 
-## ⚠️ Hata Yönetimi
+   - Uygulama başlatıldığında, kullanıcıdan boy ve kilo bilgileri istenir.
+   - BMI hesaplandıktan sonra, kullanıcıya bir dizi soru yöneltilir.
+   - Tüm sorular cevaplandıktan sonra, genel bir sağlık değerlendirmesi sunulur.
 
-- Geçersiz girişler: "Lütfen geçerli bir sayı girin!" mesajı gösterilir.
-- Negatif veya sıfır değerler: "Boy ve kilo pozitif olmalıdır!" uyarısı verilir.
+## Katkı Sağlama
 
----
+Katkılarınızı memnuniyetle karşılıyoruz! Projeye katkıda bulunmak için aşağıdaki adımları izleyebilirsiniz:
 
-## 📌 Geliştirme Fikirleri
+1. **Depoyu Fork'layın**
+2. **Yeni Bir Branch Oluşturun:** `git checkout -b yeni-ozellik`
+3. **Değişikliklerinizi Commit Edin:** `git commit -m 'Yeni özellik eklendi'`
+4. **Branch'inizi Push Edin:** `git push origin yeni-ozellik`
+5. **Pull Request Oluşturun`
 
-- BMI sonuçlarını kaydederek bir geçmiş tablosu oluşturma.
-- Cinsiyet ve yaşa göre daha hassas kategoriler ekleme.
-- Modern bir arayüz için Tkinter yerine PyQt veya Kivy kullanma.
+## Lisans
 
----
+Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
 
-## 📄 Lisans
+## İletişim
 
-Bu proje [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+Herhangi bir sorunuz veya öneriniz varsa, lütfen [saitsabuncu](https://github.com/saitsabuncu) ile iletişime geçin.
 
 ---
-
-## 🤝 Katkıda Bulunma
-
-Bu projeyi geliştirmek veya sorunları rapor etmek için pull request veya issue açabilirsiniz.
